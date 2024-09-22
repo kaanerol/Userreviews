@@ -1,0 +1,6 @@
+pandas
+streamlit
+gspread
+oauth2client
+textblob
+matplotlib
