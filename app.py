@@ -26,7 +26,7 @@ if page == 'Review Form':
     credentials = ServiceAccountCredentials.from_json_keyfile_dict(credentials_info, scope)
     client = gspread.authorize(credentials)
 
-    # Google Sheet'e bağlan
+    
     spreadsheet_id = "1b5zp_8mw9UUtiAnO5OctK4sOiKl-ynMfJ8a7C2Zkp70"
     worksheet_name = "Sayfa1"
     sheet = client.open_by_key(spreadsheet_id).worksheet(worksheet_name)  # Bu satırın çalıştığından emin olun
@@ -192,8 +192,9 @@ elif page == 'Management':
                     credentials = ServiceAccountCredentials.from_json_keyfile_dict(credentials_info, scope)
                     client = gspread.authorize(credentials)
 
-                    spreadsheet_id = st.secrets["spreadsheet_id"]
-                    worksheet_name = st.secrets["worksheet_name"]
+                   
+                    spreadsheet_id = "1b5zp_8mw9UUtiAnO5OctK4sOiKl-ynMfJ8a7C2Zkp70"
+                    worksheet_name = "Sayfa1"
 
                     sheet = client.open_by_key(spreadsheet_id).worksheet(worksheet_name)
                     df = sheet.get_all_records()
