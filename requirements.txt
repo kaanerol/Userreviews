@@ -2,5 +2,9 @@ pandas
 streamlit
 gspread
 oauth2client
-textblob
+seaborn
 matplotlib
+nltk
+transformers
+torch
+
